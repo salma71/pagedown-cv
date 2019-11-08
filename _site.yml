@@ -1,15 +1,13 @@
-name: "Ulrik Lyngs"
+name: "Salma Elshahawy"
 navbar:
-  title: "Ulrik Lyngs"
+  title: "Salma Elshahawy"
   right:
     - text: "Home"
-      href: "https://ulriklyngs.com"
+      href: "https://"
     - text: "Projects"
-      href: "https://ulriklyngs.com/projects"
-    - text: "Publications"
-      href: "https://ulriklyngs.com/publications"
+      href: "https://"
     - text: "CV"
       href: cv.html
     - text: "Blog"
-      href: "https://ulyngs.github.io/blog/"
+      href: "https://"
 output_dir: "docs"

@@ -10,11 +10,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Ulrik Lyngs" />
 
-<meta name="date" content="2019-05-04" />
 
-<title>Pagedown CVs</title>
+<title>Salma Elshahawy: CV</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -22,18 +20,12 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-84972342-6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-84972342-6');
-</script>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -80,6 +72,11 @@ h6 {
 }
 </style>
 
+<link rel="stylesheet" href="css/make-cv-like-other.css" type="text/css" />
+<link rel="stylesheet" href="css/one-column-cv.css" type="text/css" />
+<link rel="stylesheet" href="css/website-page.css" type="text/css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="fontawesome-free-5.8.1-web/css/all.min.css" type="text/css" />
 
 
 
@@ -259,6 +256,63 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -268,16 +322,21 @@ $(document).ready(function () {
 <div class="container-fluid main-container">
 
 
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
 
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="https://ulriklyngs.com">Ulrik Lyngs</a>
+      <a class="navbar-brand" href="https://www.github.com/salma71">Salma Elshahawy</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -285,19 +344,16 @@ $(document).ready(function () {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://ulriklyngs.com">Home</a>
+  <a href="https://www.github.com/salma71">Home</a>
 </li>
 <li>
-  <a href="https://ulriklyngs.com/projects">Projects</a>
-</li>
-<li>
-  <a href="https://ulriklyngs.com/publications">Publications</a>
+  <a href="https://www.github.com/salma71">Projects</a>
 </li>
 <li>
   <a href="cv.html">CV</a>
 </li>
 <li>
-  <a href="https://ulyngs.github.io/blog/">Blog</a>
+  <a href="https://www.medium.com/@salmaeng71">Blog</a>
 </li>
       </ul>
     </div><!--/.nav-collapse -->
@@ -308,29 +364,172 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Pagedown CVs</h1>
-<h4 class="author">Ulrik Lyngs</h4>
-<h4 class="date">05/04/2019</h4>
+<h1 class="title toc-ignore">Salma Elshahawy: CV</h1>
 
 </div>
 
 
-<p>This repository has different versions of my resume, with the paged versions created with <a href="https://github.com/rstudio/pagedown"><code>pagedown</code></a> (NOTE: for now 1 and 2 only works properly in Chrome, as some aspects of CSS Paged Media are only supported by this browser):</p>
-<ol style="list-style-type: decimal">
-<li><a href="two-column-paged-brief.html">Paged, 2-column brief resume</a></li>
-<li><a href="one-column-paged.html">Paged, 1-column resume</a></li>
-<li><a href="one-column.html">Ordinary scrolling HTML resume</a></li>
-<li><a href="website-cv.html">Ordinary scrolling HTML resume, formatted in the style of my personal website</a></li>
+<p><br></p>
+<div id="summary" class="section level1">
+<h1>Summary</h1>
+<p>I am a full stack software Engineer with a passion for cleanly written, organized, and well-tested code. Have a special passion about <strong>Python</strong> as a data <em>analysis language</em>.</p>
+<p>I have experience using Javascript, Ruby, R, Java, and their frameworks. I’ve developed many applications in many languages especially in financial industry. My background in mechanical engineering helped me to enhance my abilities as a <strong>Software Engineer</strong>.</p>
+<p>I’m thoughtful in my approach to programming and have refined my skills through building various applications using various stacks. I am a strong problem solver, currently looking to contribute my range of skills to a team that needs a dedicated performer with a broad grasp of technologies.</p>
+<p>I like to learn by reading and to convey the learning skills via writing. I have a blogpost on <a href="https://medium.com/@salmaeng71">Medium</a> - Kindly check it out. Many followers find it useful to them.</p>
+<p>You can download a brief version of <a href="https://github.com/salma71">my CV as PDF</a>.</p>
+<p><br></p>
+<div id="skills" class="section level2 technical nohead">
+<h2>Skills</h2>
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">what</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">- <em>Programming, data analysis and visualisation</em> in Python, R (tidyverse),D3.js, Javascript</td>
+</tr>
+<tr class="even">
+<td align="left">- <em>Reproducible research with dynamic documents</em> in R Markdown LaTeX</td>
+</tr>
+<tr class="odd">
+<td align="left">- <em>Web development</em> In Ruby on Rails, Java</td>
+</tr>
+<tr class="even">
+<td align="left">- <em>Database management</em> NoSQL, Couch Database, Oracle Database, Sqlite, MongoDB, JSON, XML</td>
+</tr>
+<tr class="odd">
+<td align="left">- <em>Testing framework</em> Junit, Rspec, Capybara, Shoulda, Jest</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="selected-work-experience" class="section level2">
+<h2>Selected work experience</h2>
+<table>
+<thead>
+<tr class="header">
+<th align="left">year</th>
+<th align="left">what</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">2019 — 2019</td>
+<td align="left"><span class="work-title">Software Engineer</span><br class='work-break'>CarOpp, New York, USA<br></span><br class='work-break'>Built MVP model using Ruby on Rails framework,wrote unit test and feature tests</td>
+</tr>
+<tr class="even">
+<td align="left">2018 — 2019</td>
+<td align="left"><span class="work-title">Software EngineerII</span><br class='work-break'>Cognizant, New York, USA<br></span><br class='work-break'>Assisted in developing new software to provide richer ways of interacting with the MCS. Wrote SQL query for data extraction and management (MSSQl or Oracle or MySQL or postgresql). Utilized maven to manage the project dependencies. Wrote unit tests using Junit-5 following the TDD approach. Worked with the development team in the deploying to E1, E2, E3 environments including Jenkins, Sonar for quality purposes (CI/CD). Worked with project and issue tracking through JIRA tool. Worked according to Agile Development Methodology (sprint every 2 weeks). Worked with bitbucket and constructed a confluence project document.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="education" class="section level2 education nohead">
+<h2>Education</h2>
+<table>
+<thead>
+<tr class="header">
+<th align="left">year</th>
+<th align="left">what</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">2019 — Present</td>
+<td align="left">MSc in Data Science, The City University of New York City</td>
+</tr>
+<tr class="even">
+<td align="left">2017 — 2018</td>
+<td align="left">Software Engineering bootcamp, Flatiron school New York</td>
+</tr>
+<tr class="odd">
+<td align="left">2002 — 2007</td>
+<td align="left">BA in Mechanical Engineering, Cairo University</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="projects" class="section level2 tabset nohead publications tabset-fade">
+<h2>Projects</h2>
+<div id="data-science" class="section level3">
+<h3>Data science</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left">title</th>
+<th align="left">short_title</th>
+<th align="left">GitHub</th>
+<th align="left">stack</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="work-title"><a href="https://rpubs.com/salmaeng/spam_ham_classifier">spam-ham document classification filter</a></span><br class='work-break'><br></span><br class='work-break'></td>
+<td align="left">Applying multiple unsupervised machine learning algorithms to classify documents as spam or ham</td>
+<td align="left"><a href="https://github.com/salma71/MSDS_2019/tree/master/Fall2019/aquisition_management_607/week_10">GitHub-Repo</a></td>
+<td align="left">R, ML</td>
+</tr>
+<tr class="even">
+<td align="left"><span class="work-title"><a href="https://rpubs.com/salmaeng/UN_internation_migration_analysis">UN-migration stock analysis</a></span><br class='work-break'><br></span><br class='work-break'></td>
+<td align="left">Used tidyverse in R to transform wide tables into long version. Applied ggmap to illustrate population capacity accoss multiple countries</td>
+<td align="left"><a href="https://github.com/salma71/MSDS_2019/tree/master/Fall2019/aquisition_management_607/week_6/project_2">GitHub-Repo</a></td>
+<td align="left">R</td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="work-title"><a href="https://rpubs.com/salmaeng/datascience_skills_proposal">Best data science skills</a></span><br class='work-break'><br></span><br class='work-break'></td>
+<td align="left">Scrape multiple job posting platform and extract the most common required skills for a data scientist position using ML techniques like bag of words.</td>
+<td align="left"><a href="https://github.com/salma71/DataScience_skills">GitHub-Repo</a></td>
+<td align="left">R, ML</td>
+</tr>
+<tr class="even">
+<td align="left"><span class="work-title"><a href="https://github.com/salma71/titanic_data_report/blob/master/Titanic_project.ipynb">Titanic desaster analysis</a></span><br class='work-break'><br></span><br class='work-break'></td>
+<td align="left">It was a kaggle project for performing analysis on the Titanic desaster</td>
+<td align="left"><a href="https://github.com/salma71/titanic_data_report">GitHub-Repo</a></td>
+<td align="left">Python, Numpy, Panda</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="web-development" class="section level3">
+<h3>Web development</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left">title</th>
+<th align="left">short_title</th>
+<th align="left">GitHub</th>
+<th align="left">stack</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="work-title"><a href="https://damp-wave-35943.herokuapp.com/users/sign_in">StudyHub</a></span><br class='work-break'><br></span><br class='work-break'></td>
+<td align="left">Is a Ruby on Rails application platform for students to manage their study</td>
+<td align="left"><a href="https://github.com/salma71/studyhub">GitHub-Repo</a></td>
+<td align="left">Ruby, Rails, Javascript, Postgres</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>This website is done by R-markdown and pagedown package using R<a href="#fnref1" class="footnote-back">↩</a></p></li>
 </ol>
-<p>The resumés pull in different subsets of cv entries that live in two separate Excel files (one for publications, one for all other cv entries).</p>
-<p>To use this for your own CV, download or clone the GitHub repo: <a href="https://github.com/ulyngs/pagedown-cv/" class="uri">https://github.com/ulyngs/pagedown-cv/</a></p>
-<p>Here is the original resume layout (made in Microsoft Word) that I wanted to recreate with <code>pagedown</code>:</p>
-<p><img src="examples/page1_new.png" style="width:49.0%" /> <img src="examples/page2.png" style="width:49.0%" /></p>
-<p>And here are two screenshots that illustrate what the Excel files with cv entries and publications look like:</p>
-<p><img src="examples/cv-entries.png" style="width:49.0%" /> <img src="examples/publications.png" style="width:49.0%" /></p>
+</div>
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -363,6 +562,32 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

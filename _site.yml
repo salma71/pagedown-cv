@@ -7,7 +7,7 @@ navbar:
     - text: "Projects"
       href: "https://www.github.com/salma71"
     - text: "CV"
-      href: cv.html
+      href: "https://www.github.com/salma71"
     - text: "Blog"
       href: "https://www.medium.com/@salmaeng71"
 output_dir: "docs"

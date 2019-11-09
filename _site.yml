@@ -3,11 +3,11 @@ navbar:
   title: "Salma Elshahawy"
   right:
     - text: "Home"
-      href: "https://"
+      href: "https://www.github.com/salma71"
     - text: "Projects"
-      href: "https://"
+      href: "https://www.github.com/salma71"
     - text: "CV"
       href: cv.html
     - text: "Blog"
-      href: "https://"
+      href: "https://www.medium.com/@salmaeng71"
 output_dir: "docs"

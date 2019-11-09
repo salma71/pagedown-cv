@@ -1,6 +1,6 @@
 ---
 title: "Pagedown CVs"
-author: "Ulrik Lyngs"
+author: "Salma Elshahawy"
 date: "05/04/2019"
 output: 
   html_document:
@@ -9,20 +9,5 @@ output:
 
 This repository has different versions of my resume, with the paged versions created with [`pagedown`](https://github.com/rstudio/pagedown) (NOTE: for now 1 and 2 only works properly in Chrome, as some aspects of CSS Paged Media are only supported by this browser):
 
-1. [Paged, 2-column brief resume](two-column-paged-brief.html)
-2. [Paged, 1-column resume](one-column-paged.html)
-3. [Ordinary scrolling HTML resume](one-column.html)
-4. [Ordinary scrolling HTML resume, formatted in the style of my personal website](website-cv.html)
 
-The resumés pull in different subsets of cv entries that live in two separate Excel files on my machine (one for publications, one for all other cv entries).
-
-To use this for your own CV, download or clone the GitHub repo: https://github.com/ulyngs/pagedown-cv/ 
-
-Here is the original resume layout (made in Microsoft Word) that I wanted to recreate with `pagedown`:
-
-![](examples/page1_new.png){ width=49% } ![](examples/page2.png){ width=49% }
-
-
-And here are two screenshots that illustrate what the Excel files with cv entries and publications look like:
-
-![](examples/cv-entries.png){ width=49% } ![](examples/publications.png){ width=49% }
+The resumés pull in different subsets of cv entries that live in two separate Excel files on my machine (one for projects, one for all other cv entries).

@@ -1,5 +1,5 @@
 ---
-title: "Ulrik Lyngs <br> Curriculum vitae"
+title: "Salma Elshahawy <br> Curriculum vitae"
 #date: "`r Sys.Date()`"
 output:
   pagedown::html_paged:

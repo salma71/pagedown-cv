@@ -73,7 +73,7 @@ h2.box {
   display: none;
 }
 .info-box td:first-child{
-  width: 12%;
+  width: 20%;
   text-align: center;
 }
 .info-box td {
@@ -102,7 +102,7 @@ h2.box {
 .work td:first-child,
 .posters td:first-child,
 .service td:first-child {
-  width: 13%;
+  width: 16%;
 }
 
 .cv-table td:first-child {
@@ -123,4 +123,8 @@ td {
 }
 .work-break {
   height: 100px;
+  font-weight: bold;
 }
+
+.test a {
+  width: 30%;

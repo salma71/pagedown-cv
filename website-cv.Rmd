@@ -14,8 +14,8 @@ knitr::opts_chunk$set(echo = FALSE)
 library(tidyverse)
 library(knitr)
 
-#### publications #####
-publications <- readxl::read_xlsx("_cv_data/publications.xlsx")
+#### projects #####
+projects <- readxl::read_xlsx("_cv_data/projects.xlsx")
 
 #### all other entries #####
 cv_entries <- readxl::read_xlsx("_cv_data/cv_entries.xlsx")
@@ -26,53 +26,17 @@ cv_entries <- readxl::read_xlsx("_cv_data/cv_entries.xlsx")
 
 # Summary
 
-I am passionate about using insights from the behavioural neurosciences to **design digital technology that is sensitive to human limitations and biases**, particularly in relation to attention and self-regulation.
+I am a full stack software Engineer with a passion for cleanly written, organized, and well-tested code. Have a special passion about **Python** as a data _analysis language_. 
 
-My **academic and professional background** is highly interdisciplinary, and I try to integrate best practices from many work spheres, such as using tools from large-scale event management to structure academic projects.
+I have experience using Javascript, Ruby, R, Java, and their frameworks. I've developed many applications in many languages especially in financial industry. My background in mechanical engineering helped me to  enhance my abilities as a **Software Engineer**.
 
-My **personal interests** include travelling & couchsurfing, samatha meditation, dancing (Cuban salsa and swing), and playing music (whatever instruments I can get my hands on, and ideally with the [Karaoke Collective](https://karaokecollective.com)).
+I’m thoughtful in my approach to programming and have refined my skills through building various applications using various stacks. I am a strong problem solver, currently looking to contribute my range of skills to a team that needs a dedicated performer with a broad grasp of technologies.
 
-Download a brief version of [my CV as PDF](https://github.com/ulyngs/pagedown-cv/raw/master/_pdfs/lyngs_cv_2019_june.pdf).
+I like to learn by reading and to convey the learning skills via writing. I have a blogpost on [Medium](https://medium.com/@salmaeng71) - Kindly check it out. Many followers find it useful to them.
+
+You can download a brief version of [my CV as PDF](https://github.com/salma71).
 
 <br>
-
-# Academia
-## Education {.education .nohead}
-```{r}
-cv_entries %>% 
-  filter(type == 'education') %>% 
-  mutate(what = str_c(what, ", ", where)) %>% 
-  mutate(year = str_c(year_begin, " --- ", year_end)) %>% 
-  select(year, what) %>% 
-  kable()
-```
-
-
-# Work (non-academia)
-## Selected work experience {.work .nohead .vertical-top}
-```{r}
-cv_entries %>% 
-  filter(type == 'work', is.na(website)) %>% 
-  mutate(additional_info = replace_na(additional_info, "")) %>% 
-  mutate(what = str_c("<span class='work-title'>", what, "</span><br class='work-break'>", where, "<br>", additional_info)) %>% 
-  arrange(desc(year_begin)) %>% 
-  mutate(year = ifelse(!is.na(year_end), str_c(year_begin, " --- ", year_end), year_begin)) %>% 
-  select(year, what) %>% 
-  kable()
-```
-
-
-# Technical
-## Software development {.cv-table .nohead .vertical-top}
-```{r}
-cv_entries %>% 
-  filter(type == 'programming') %>% 
-  replace_na(list(where = "", additional_info = "")) %>% 
-  mutate(what = str_c(what, ", ", where, "<br>", additional_info)) %>% 
-  select(year_begin, what) %>% 
-  arrange(desc(year_begin)) %>% 
-  kable(align = c('l', 'l'))
-```
 
 ## Skills {.technical .nohead}
 ```{r}
@@ -84,17 +48,56 @@ cv_entries %>%
 ```
 
 
-# Personal
-## Skills & volunteering {.personal .service .nohead}
+
+## Selected work experience
 ```{r}
-cv_entries %>%
-  filter(type == 'volunteering') %>%
-  mutate(what = str_c("<span class='work-title'>", what, "</span><br class='work-break'>", where)) %>%
-  mutate(what = ifelse(!is.na(additional_info), str_c(what, "<br>", additional_info), what)) %>%
-  mutate(year = ifelse(!is.na(year_end), str_c(year_begin, " --- ", year_end), year_begin)) %>%
-  arrange(desc(year), desc(year_end)) %>%
-  select(year, what) %>%
+cv_entries %>% 
+  filter(type == 'work', is.na(website)) %>% 
+  mutate(additional_info = replace_na(additional_info, "")) %>% 
+  mutate(what = str_c("<span class='work-title'>", what, "</span><br class='work-break'>", where, "<br>", "</span><br class='work-break'>", additional_info)) %>% 
+  arrange(desc(year_begin)) %>% 
+  mutate(year = ifelse(!is.na(year_end), str_c(year_begin, " --- ", year_end), year_begin)) %>% 
+  select(year, what) %>% 
   kable()
 ```
+
+
+## Education {.education .nohead}
+```{r}
+cv_entries %>% 
+  filter(type == 'education') %>% 
+  mutate(what = str_c(what, ", ", where)) %>% 
+  mutate(year = str_c(year_begin, " --- ", year_end)) %>% 
+  select(year, what) %>% 
+  kable()
+```
+
+## Projects {.tabset .nohead .publications .tabset-fade}
+
+### Data science
+```{r}
+projects %>%
+  filter(type == "data science") %>%
+  mutate(title = ifelse(!is.na(url), str_c("<span class='work-title'>","[", title, "](", url, ")", "</span><br class='work-break'>",  "<br>", "</span><br class='work-break'>"), title)) %>% #turn title into link
+  mutate(GitHub = ifelse(!is.na(GitHub), str_c("[GitHub-Repo](", GitHub, ")"), GitHub)) %>%
+  select(title, short_title, GitHub, stack) %>%
+  #mutate(title = str_c("<span style='text-decoration: underline'>", title, "</span>")) %>% #underline title
+
+knitr::kable()
+```
+
+### Web development
+```{r}
+projects %>%
+  filter(type == "web development") %>%
+  mutate(title = ifelse(!is.na(url), str_c("<span class='work-title'>","[", title, "](", url, ")", "</span><br class='work-break'>",  "<br>", "</span><br class='work-break'>"), title)) %>% #turn title into link
+  mutate(GitHub = ifelse(!is.na(GitHub), str_c("[GitHub-Repo](", GitHub, ")"), GitHub)) %>%
+  select(title, short_title, GitHub, stack) %>%
+  #mutate(title = str_c("<span style='text-decoration: underline'>", title, "</span>")) %>% #underline title
+
+knitr::kable()
+```
+
+^[This website is done by R-markdown and pagedown package using R]
 
 

@@ -19,10 +19,10 @@ library(tidyverse)
 library(knitr)
 
 #### publications #####
-publications <- readxl::read_xlsx("../cv_data/publications.xlsx")
+publications <- readxl::read_xlsx("./cv_data/projects.xlsx")
 
 #### all other entries #####
-cv_entries <- readxl::read_xlsx("../cv_data/cv_entries.xlsx")
+cv_entries <- readxl::read_xlsx("./cv_data/cv_entries.xlsx")
 
 ```
 

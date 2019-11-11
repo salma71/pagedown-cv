@@ -25,15 +25,20 @@ cv_entries <- readxl::read_xlsx("_cv_data/cv_entries.xlsx")
 
 # Summary
 
-I am a full stack software Engineer with a passion for cleanly written, organized, and well-tested code. Have a special passion about **Python** as a data _analysis language_. 
+An entry-level data scientist with a passion for building models and translate data points into business insights. Offering exceptional programming, statistical analysis, and research abilities to extract, clean, and prepare data for data science model ingestion. 
 
-I have experience using Javascript, Ruby, R, Java, and their frameworks. I've developed many applications in many languages especially in financial industry. My background in mechanical engineering helped me to  enhance my abilities as a **Software Engineer**.
+I’m thoughtful in my approach to data analysis and have refined my skills through pursuing a **master's degree in Data Science** at **CUNY university**. 
 
-I’m thoughtful in my approach to programming and have refined my skills through building various applications using various stacks. I am a strong problem solver, currently looking to contribute my range of skills to a team that needs a dedicated performer with a broad grasp of technologies.
+I am a strong problem solver, currently looking to contribute my range of skills to a team that needs a dedicated performer with a broad grasp of technologies.
+
+I am also a full stack software Engineer with a passion for cleanly written, organized, and well-tested code. Have a special passion about **Python** as a data _analysis language_. 
+
+I have experience using Javascript, Ruby, R, Java, and their frameworks. I've developed many applications in many languages especially in financial industry. My background in mechanical engineering helped me to enhance my abilities as a **Software Engineer**.
+
 
 I like to learn by reading and to convey the learning skills via writing. I have a blogpost on [Medium](https://medium.com/@salmaeng71) - Kindly check it out. Many followers find it useful to them.
 
-You can download a brief version of [my CV as PDF](https://github.com/salma71).
+You can download a brief version of [my CV as PDF](https://github.com/salma71/resume_website/blob/master/Salma-Resume_Nov.11.pdf).
 
 <br>
 

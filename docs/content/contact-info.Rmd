@@ -4,11 +4,13 @@
 
 | Center | Left |
 |:------:|:-----|
-| <i class="fas fa-map-marker-alt"></i>|Graduate student in the Department of Analytics and Data Science,\
-The City University of New York, New York, USA|
+| <i class="fas fa-map-marker-alt"></i>|Graduate student,\
+Department of Analytics and Data Science,\
+The City University of New York,\
+New York, USA|
 | <i class="fas fa-envelope"></i> | salmaeng\@gmail.com |
-| <i class="fas fa-globe"></i> | []() |
-| <i class="fab fa-github"></i> | [salma71](https://github.com/ulyngs/) |
+| <i class="fas fa-globe"></i> | [website](https://github.com/salma71/) |
+| <i class="fab fa-github"></i> | [salma71](https://github.com/salma71/) |
 
 </div>
 ```

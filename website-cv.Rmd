@@ -41,7 +41,7 @@ You can download a brief version of [my CV as PDF](https://github.com/salma71).
 ```{r}
 cv_entries %>% 
   filter(type == 'technical') %>% 
-  mutate(what = str_c("- *", what, "* ", additional_info)) %>% 
+  mutate(what = str_c("- **", what, ":** ", additional_info)) %>% 
   select(what) %>% 
   kable()
 ```
